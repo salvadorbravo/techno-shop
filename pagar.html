@@ -158,19 +158,20 @@
               </div>
 
               <hr />
-              <input
+              <!-- <input
                 id="form-button"
                 class="btn btn-success btn-block"
                 type="submit"
-                value="Continuar"
-              />
+                value="Finalizar compra"
+              /> -->
+              <button type="submit" class="btn btn-primary registerbtn" data-bs-toggle="modal" data-bs-target="#myModal">Finalizar Compra</button>
             </form>
           </div>
 
           <br />
           <div class="box-element hidden" id="payment-info">
             <small>Opciones de Pago</small>
-            <!--<button id="make-payment">Make payment</button>-->
+            <img src="images/webpay.logo.png" alt="" />
             <div id="paypal-button-container"></div>
           </div>
         </div>
@@ -186,19 +187,56 @@
             <div class="cart-row">
               <div style="flex: 2">
                 <img
-                    style="width: 100px"
+                  style="width: 100px"
                   class="row-image"
                   src="./images/productos/airpods.jfif"
                   alt="foto-producto"
                 />
-              </div><br>
+              </div>
+              <br />
               <div style="flex: 2">
-                <p>Descripcion: </p><strong>Apple Airpods 3Ra Generación Con Estuche Magsafe</strong>
-              </div><br>
+                <p>Descripcion:</p>
+                <strong
+                  >Apple Airpods 3Ra Generación Con Estuche Magsafe</strong
+                >
+              </div>
+              <br />
               <div style="flex: 1">
-                <p>Total: </p><strong>$120.000</strong>
-              </div><br>
-              <div style="flex: 1"><p>Cantidad: </p><strong>x1</strong></div>
+                <p>Total:</p>
+                <strong>$120.000</strong>
+              </div>
+              <br />
+              <div style="flex: 1">
+                <p>Cantidad:</p>
+                <strong>x1</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Compra exitosa!!</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">Gracias por comprar en nuestra tienda, en breve recibiras un correo con mas informacion.</div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <a href="inicio.html" role="button" class="btn btn-danger"
+                  >Cerrar</a
+                >
+                <!--  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button> -->
+              </div>
             </div>
           </div>
         </div>
