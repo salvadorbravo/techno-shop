@@ -40,8 +40,8 @@
         text-transform: uppercase;
       }
 
-      #cart-icon{
-        width:25px;
+      #cart-icon {
+        width: 25px;
         display: inline-block;
         margin-left: 15px;
       }
@@ -78,23 +78,18 @@
             >
           </li>
           <li>
-            <a href="acerca-de.html" class="nav-link px-2 link-dark"
-              >Acerca de</a
-            >
-          </li>
-          <li>
             <a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a>
           </li>
         </ul>
         <div class="col-md-3 text-end">
           <button type="button" class="btn">
-            <a href="login.html">Ingresar</a>
-          </button>
+            <a href="login.html" class="btn btn-primary">Ingresar</a>
+          </button>          
           <button type="button" class="btn">
-            <a href="register.html">Registrarse</a>
+            <a href="register.html" class="btn btn-success">Registrarse</a>
           </button>
           <a href="carrito_compras.html">
-            <img  id="cart-icon" src="images/cart.png">
+            <img id="cart-icon" src="images/cart.png" />
           </a>
         </div>
       </header>
@@ -137,9 +132,14 @@
               Los mejores accesorios electronicos
             </p>
             <h1 class="display-1 fw-bolder text-capitalize">Al mejor precio</h1>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+            <a
+              href="productos.html"
+              class="btn btn-primary px-4 py-2 fs-5 mt-5"
+              data-bs-toggle="modal"
+              data-bs-target="#booking-modal"
+            >
               Productos
-            </button>
+            </a>
           </div>
         </div>
         <div class="carousel-item c-item">
@@ -153,13 +153,14 @@
             <p class="display-1 fw-bolder text-capitalize">
               Productos con garantia
             </p>
-            <button
+            <a
+              href="productos.html"
               class="btn btn-primary px-4 py-2 fs-5 mt-5"
               data-bs-toggle="modal"
               data-bs-target="#booking-modal"
             >
               Productos
-            </button>
+            </a>
           </div>
         </div>
         <div class="carousel-item c-item">
@@ -173,13 +174,14 @@
             <p class="display-1 fw-bolder text-capitalize">
               Productos Con Descuento
             </p>
-            <button
+            <a
+              href="productos.html"
               class="btn btn-primary px-4 py-2 fs-5 mt-5"
               data-bs-toggle="modal"
               data-bs-target="#booking-modal"
             >
               Productos
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -231,7 +233,9 @@
                   Apple Airpods 3Ra Generación Con Estuche Magsafe.
                 </h5>
                 <div class="text-center my-4">
-                  <a href="carrito_compras.html" class="btn btn-warning">Agregar al carrito</a>
+                  <a href="carrito_compras.html" class="btn btn-warning"
+                    >Agregar al carrito</a
+                  >
                 </div>
               </div>
             </div>
