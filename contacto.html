@@ -72,9 +72,8 @@
 
     <!-- Formulario de contacto -->
     <div class="container  py-4">
-      <!-- Bootstrap 5 starter form -->
       <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <!-- Name input -->
+        <!-- Nombre para el formulario -->
         <div class="mb-3">
           <label class="form-label" for="name">Nombre</label>
           <input
@@ -83,13 +82,14 @@
             type="text"
             placeholder="Nombre"
             data-sb-validations="required"
+            required
           />
           <div class="invalid-feedback" data-sb-feedback="name:required">
             Debe ingresar un nombre
           </div>
         </div>
 
-        <!-- Email address input -->
+        <!-- Correo electronico -->
         <div class="mb-3">
           <label class="form-label" for="emailAddress"
             >Correo electronico</label
@@ -112,7 +112,7 @@
           </div>
         </div>
 
-        <!-- Message input -->
+        <!-- Ingresar mensaje -->
         <div class="mb-3">
           <label class="form-label" for="message">Mensaje</label>
           <textarea
@@ -128,12 +128,12 @@
           </div>
         </div>
 
-        <!-- Form submissions success message -->
+        <!-- Si el mensaje se ha enviado correctamente -->
         <div class="d-none" id="submitSuccessMessage">
           <div class="text-center mb-3">Formulario enviado correctamente!</div>
         </div>
 
-        <!-- Form submissions error message -->
+        <!-- Si hubo un error al enviar el formulario -->
         <div class="d-none" id="submitErrorMessage">
           <div class="text-center text-danger mb-3">
             Error al enviar el formulario!
@@ -142,9 +142,7 @@
 
         <!-- Form submit button -->
         <div class="d-grid">
-          <button class="btn btn-primary" id="submitButton" type="submit">
-            Enviar
-          </button>
+          <a href="inicio.html" class="btn btn-primary">Enviar</a>
         </div>
       </form>
     </div>
