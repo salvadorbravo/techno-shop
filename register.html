@@ -1,115 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrarse</title>
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      .btn-color {
-        background-color: #0e1c36;
-        color: #fff;
-      }
 
-      .profile-image-pic {
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="css/style-register.css">
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
 
-      .cardbody-color {
-        background-color: #ebf2fa;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      .registrar {
-        margin-bottom: 5px;
-        color: black;
-        width: 100%;
-        padding: 5px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h2 class="text-center text-dark mt-5">Crear una cuenta</h2>
-          <div class="card my-5">
-            <form class="card-body cardbody-color p-lg-5">
-              <div class="text-center">
-                <img
-                  src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png"
-                  class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
-                  width="200px"
-                  alt="profile"
-                />
-              </div>
-
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="user"
-                  aria-describedby="userHelp"
-                  placeholder="Usuario"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Correo electronico"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Contraseña"
-                  required
-                />
-              </div>
-              <div class="text-center">
-                <button type="submit">
-                  <a class="registrar" href="inicio.html">Registrarse</a>
-                </button>
-              </div>
-              <div id="emailHelp" class="form-text text-center mb-5 text-dark">
-                Ya tienes una cuenta?
-                <a href="login.html" class="text-dark fw-bold">
-                  Inicia sesion</a
-                >
-              </div>
-            </form>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">Crear usuario</h4>
+      <p class="text-center">Comienza con una cuenta totalmente gratuita</p>
+      <p>
+        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Conectar vía Twitter</a>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Conectar vía Facebook</a>
+      </p>
+      <p class="divider-text">
+        <span class="bg-light">OR</span>
+      </p>
+      <form>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-        </div>
-      </div>
+          <input name="" class="form-control" placeholder="Nombre Completo" type="text">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input name="" class="form-control" placeholder="Correo Electrónico" type="email">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+          </div>
+          <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+569</option>
+            <option value="1">+972</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+          </select>
+          <input name="" class="form-control" placeholder="Número movil" type="text">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control">
+            <option selected=""> Ocupación </option>
+            <option>Estudiante</option>
+            <option>Trabajador</option>
+          </select>
+        </div> <!-- form-group end.// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input class="form-control" placeholder="Crear contraseña" type="password">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input class="form-control" placeholder="Repetir Contraseña" type="password">
+        </div> <!-- form-group// -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block"> Crear Cuenta </button>
+        </div> <!-- form-group// -->
+        <p class="text-center">¿Olvidaste cuenta? <a href="">Recuperar cuenta</a> </p>
+      </form>
+    </article>
+  </div> <!-- card.// -->
+
+  </div>
+  <!--container end.//-->
+
+  <br><br>
+  <article class="bg-secondary mb-3">
+    <div class="card-body text-center">
+      <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
+      <p class="h5 text-white">Components and templates <br> for Ecommerce, marketplace, booking websites
+        and product landing pages</p> <br>
+      <p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com
+          <i class="fa fa-window-restore "></i></a></p>
     </div>
+    <br><br>
+  </article>
   </body>
+
 </html>
