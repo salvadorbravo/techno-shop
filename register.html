@@ -1,26 +1,97 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registrarse</title>
-  <link rel="stylesheet" href="css/style-register.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de usuario</title>
   <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!------ Include the above in your HEAD tag ---------->
-
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <!-- CSS Aparte -->
+  <link rel="stylesheet" href="css/style-register.css" />
+  <!-- Font awesome ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .offert {
+      margin-top: 15px;
+      margin: 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #cart-icon {
+      width: 25px;
+      display: inline-block;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header de Barra Menu -->
+  <div class="container">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap" />
+        </svg>
+      </a>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          <a href="inicio.html" class="nav-link px-2 link-primary">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="teclados.html">Teclados</a></li>
+            <li><a class="dropdown-item" href="ratones.html">Ratones</a></li>
+            <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
+            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a>
+        </li>
+      </ul>
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn">
+          <a href="login.html" class="btn btn-primary">Ingresar</a>
+        </button>
+        <button type="button" class="btn">
+          <a href="register.html" class="btn btn-success">Registrarse</a>
+        </button>
+        <a href="carrito_compras.html">
+          <img id="cart-icon" src="images/cart.png" />
+        </a>
+      </div>
+    </header>
+  </div> <!--Fin de Barra menu-->
+
+  <!--Formulario de Registro-->
   <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
-      <h4 class="card-title mt-3 text-center">Crear usuario</h4>
-      <p class="text-center">Comienza con una cuenta totalmente gratuita</p>
+      <h4 class="card-title mt-3 text-center">Registro</h4>
+      <p class="text-center">Recibe un descuento del 10% al registrarte utilizando tus redes sociales</p>
       <p>
-        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Conectar vía Twitter</a>
-        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Conectar vía Facebook</a>
+        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Iniciar vía Twitter</a>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Iniciar vía facebook</a>
       </p>
       <p class="divider-text">
         <span class="bg-light">OR</span>
@@ -30,23 +101,22 @@
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="Nombre Completo" type="text">
+          <input name="" class="form-control" placeholder="Nombre completo" type="text">
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="Correo Electrónico" type="email">
+          <input name="" class="form-control" placeholder="Correo electronico" type="email">
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
           </div>
           <select class="custom-select" style="max-width: 120px;">
-            <option selected="">+569</option>
-            <option value="1">+972</option>
-            <option value="2">+198</option>
-            <option value="3">+701</option>
+            <option selected="">+56</option>
+            <option value="1">+1</option>
+            <option value="2">+34</option>
           </select>
           <input name="" class="form-control" placeholder="Número movil" type="text">
         </div> <!-- form-group// -->
@@ -55,9 +125,10 @@
             <span class="input-group-text"> <i class="fa fa-building"></i> </span>
           </div>
           <select class="form-control">
-            <option selected=""> Ocupación </option>
+            <option selected=""> Ocupación</option>
             <option>Estudiante</option>
             <option>Trabajador</option>
+            <option>Desempleado</option>
           </select>
         </div> <!-- form-group end.// -->
         <div class="form-group input-group">
@@ -70,13 +141,17 @@
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
           </div>
-          <input class="form-control" placeholder="Repetir Contraseña" type="password">
+          <input class="form-control" placeholder="Repetir contraseña" type="password">
         </div> <!-- form-group// -->
         <div class="form-group">
           <button type="submit" class="btn btn-primary btn-block w-100"> Crear Cuenta </button>
         </div> <!-- form-group// -->
-        <p class="text-center">¿Olvidaste cuenta? <a href="">Recuperar cuenta</a> </p>
+        <p class="text-center">¿Olvidaste tu cuenta? <a href="">Recuperar cuenta</a> </p>
       </form>
-      </body>
+    </article>
+  </div> <!-- card.// -->
+  </div>
+  <!--container end.//-->
+</body>
 
 </html>
