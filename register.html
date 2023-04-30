@@ -24,6 +24,52 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <!-- Jquery validation -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#form-registro').validate({
+        rules: {
+          user: {
+            required: true,
+            minlength: 5
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          password: {
+            required: true
+          },
+          password2: {
+            required: true,
+            equalTo: '#password'
+          }
+        },
+        messages: {
+          user: {
+            required: 'Ingrese un nombre de usuario valido',
+            minlength: 'El nombre de usuario debe tener al menos 5 caracteres'
+          },
+          email: {
+            required: 'Debe ingresar un email valido'
+          },
+          password: {
+            required: 'Ingrese una contraseña valida'
+          },
+          password2: {
+            required: 'La contraseña debe coincidir'
+          }
+        },
+        submitHandler: function(form) {
+          // Redirigir a la pagina de inicio de sesion exitosa
+          window.location.href = 'inicio.html'
+        }
+      });
+    });
+  </script>
   <style>
     .offert {
       margin-top: 15px;
@@ -86,30 +132,21 @@
 
   <!--Formulario de Registro-->
   <div class="card bg-light">
-    <article class="card-body mx-auto" style="max-width: 400px;">
-      <h4 class="card-title mt-3 text-center">Registro</h4>
-      <p class="text-center">Recibe un descuento del 10% al registrarte utilizando tus redes sociales</p>
-      <p>
-        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Iniciar vía Twitter</a>
-        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Iniciar vía facebook</a>
-      </p>
-      <p class="divider-text">
-        <span class="bg-light">OR</span>
-      </p>
-      <form id="form-validation">
+    <article class="card-body mx-auto">
+      <form id="form-registro">
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-          <input name="name" id="name" class="form-control" placeholder="Nombre completo" type="text">
+          <input name="user" id="user" class="form-control" placeholder="Nombre completo" type="text">
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="Correo electronico" type="email">
+          <input name="email" id="email" class="form-control" placeholder="Correo electronico" type="email">
         </div> <!-- form-group// -->
-        <div class="form-group input-group">
+        <!-- <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
           </div>
@@ -119,8 +156,8 @@
             <option value="2">+34</option>
           </select>
           <input name="" class="form-control" placeholder="Número movil" type="text">
-        </div> <!-- form-group// -->
-        <div class="form-group input-group">
+        </div> form-group// -->
+        <!-- <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-building"></i> </span>
           </div>
@@ -130,24 +167,23 @@
             <option>Trabajador</option>
             <option>Desempleado</option>
           </select>
-        </div> <!-- form-group end.// -->
+        </div> form-group end.// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
           </div>
-          <input class="form-control" placeholder="Crear contraseña" type="password">
+          <input class="form-control" placeholder="Crear contraseña" type="password" name="password" id="password">
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
           </div>
-          <input class="form-control" placeholder="Repetir contraseña" type="password">
+          <input class="form-control" placeholder="Repetir contraseña" type="password" name="password2" id="password2">
         </div> <!-- form-group// -->
         <div class="form-group">
-          
-          <button class="btn btn-primary btn-block w-100"><a href="inicio.html" class="text-white">Registrarse</a></button>
+          <input type="submit" class="btn btn-primary btn-block w-100" value="Registrarse">
         </div> <!-- form-group// -->
-        <p class="text-center">¿Olvidaste tu cuenta? <a href="">Recuperar cuenta</a> </p>
+        <!-- <p class="text-center">¿Olvidaste tu cuenta? <a href="">Recuperar cuenta</a> </p> -->
       </form>
     </article>
   </div> <!-- card.// -->

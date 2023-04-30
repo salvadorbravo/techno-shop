@@ -22,6 +22,38 @@
       integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
       crossorigin="anonymous"
     ></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- Jquery validation -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#login-form').validate({
+          rules: {
+            user: {
+              required: true,
+              minlength: 5
+            },
+            password: {
+              required: true
+            }
+          },
+          messages: {
+            user: {
+              required: 'Ingrese un nombre de usuario valido',
+              minlength: 'El nombre de usuario debe tener al menos 5 caracteres'
+            },
+            password: {
+              required: 'Ingrese una contraseña valida'
+            }
+          },
+          submitHandler: function(form) {
+            // Redirigir a la pagina de inicio de sesion exitosa
+            window.location.href = 'inicio.html';
+          }
+        });
+      });
+    </script>
     <style>
       .btn-color {
         background-color: #0e1c36;
@@ -56,7 +88,7 @@
         <div class="col-md-6 offset-md-3">
           <h2 class="text-center text-dark mt-5">Iniciar sesion</h2>
           <div class="card my-5">
-            <form class="card-body cardbody-color p-lg-5">
+            <form class="card-body cardbody-color p-lg-5" id="login-form">
               <div class="text-center">
                 <img
                   src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png"
@@ -68,11 +100,11 @@
 
               <div class="mb-3">
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Correo electronico"
+                  id="user"
+                  name="user"
+                  placeholder="Usuario"
                   required
                 />
               </div>
@@ -81,14 +113,13 @@
                   type="password"
                   class="form-control"
                   id="password"
+                  name="password"
                   placeholder="Contraseña"
                   required
                 />
               </div>
               <div class="text-center">
-                <button type="submit">
-                  <a class="iniciar" href="inicio.html">Iniciar sesion</a>
-                </button>
+                <input type="submit" class="submit" value="Iniciar sesion" onclick="redireccionar()">
               </div>
               <div id="emailHelp" class="form-text text-center mb-5 text-dark">
                 No estas registrado?
