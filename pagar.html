@@ -1,226 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pago</title>
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-      integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-      crossorigin="anonymous"
-    ></script>
-    <!-- CSS Aparte -->
-    <link rel="stylesheet" href="./css/styles.css" />
-    <!-- Font awesome ICONOS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
-      #cart-icon {
-        width: 25px;
-        display: inline-block;
-        margin-left: 15px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <div class="container">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-      >
-        <a
-          href="/"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        >
-          <svg
-            class="bi me-2"
-            width="40"
-            height="32"
-            role="img"
-            aria-label="Bootstrap"
-          >
-            <use xlink:href="#bootstrap" />
-          </svg>
-        </a>
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li>
-            <a href="inicio.html" class="nav-link px-2 link-primary">Inicio</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                productos
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="teclados.html">Teclados</a></li>
-                <li><a class="dropdown-item" href="ratones.html">Ratones</a></li>
-                <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
-                <li><a class="dropdown-item" href="accesorios.html">accesorios</a></li>
-            </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous">
+  </script>
+  <!-- CSS Aparte -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!-- Font awesome ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    #cart-icon {
+      width: 25px;
+      display: inline-block;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="container">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap" />
+        </svg>
+      </a>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          <a href="inicio.html" class="nav-link px-2 link-primary">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            productos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="teclados.html">Teclados</a></li>
+            <li><a class="dropdown-item" href="ratones.html">Ratones</a></li>
+            <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
+            <li><a class="dropdown-item" href="accesorios.html">accesorios</a></li>
+          </ul>
         </li>
 
-          <li>
-            <a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a>
-          </li>
-        </ul>
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn">
-            <a href="login.html">Ingresar</a>
-          </button>
-          <button type="button" class="btn">
-            <a href="register.html">Registrarse</a>
-          </button>
-          <a href="#">
-            <img id="cart-icon" src="images/cart.png" />
-          </a>
-        </div>
-      </header>
-    </div>
+        <li>
+          <a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a>
+        </li>
+      </ul>
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn">
+          <a href="login.html">Ingresar</a>
+        </button>
+        <button type="button" class="btn">
+          <a href="register.html">Registrarse</a>
+        </button>
+        <a href="#">
+          <img id="cart-icon" src="images/cart.png" />
+        </a>
+      </div>
+    </header>
+  </div>
 
-    <!-- Formulario de pago -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box-element" id="form-wrapper">
-            <form id="form">
-              <div id="user-info">
-                <div class="form-field">
-                  <input
-                    required
-                    class="form-control"
-                    type="text"
-                    name="name"
-                    placeholder="Nombre"
-                  />
-                </div>
-                <div class="form-field">
-                  <input
-                    required
-                    class="form-control"
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                  />
-                </div>
+  <!-- Formulario de pago -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box-element" id="form-wrapper">
+          <form id="form">
+            <div id="user-info">
+              <div class="form-field">
+                <input required class="form-control" type="text" name="name" id="name" placeholder="Nombre" />
               </div>
-
-              <div id="shipping-info">
-                <hr />
-                <p>Informacion de Compra:</p>
-                <hr />
-                <div class="form-field">
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="address"
-                    placeholder="Direccion.."
-                  />
-                </div>
-                <div class="form-field">
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="city"
-                    placeholder="Ciudad"
-                  />
-                </div>
-                <div class="form-field">
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="state"
-                    placeholder="Comuna"
-                  />
-                </div>
-                <div class="form-field">
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="zipcode"
-                    placeholder="Codigo postal"
-                  />
-                </div>
+              <div class="form-field">
+                <input required class="form-control" type="email" name="email" id="email" placeholder="Email" />
               </div>
+            </div>
 
+            <div id="shipping-info">
               <hr />
-              <!-- <input
+              <p>Informacion de Compra:</p>
+              <hr />
+              <div class="form-field">
+                <input class="form-control" type="text" name="address" id="address" placeholder="Direccion.." />
+              </div>
+              <div class="form-field">
+                <input class="form-control" type="text" name="city" id="city" placeholder="Ciudad" />
+              </div>
+              <div class="form-field">
+                <input class="form-control" type="text" name="state" id="state" placeholder="Comuna" />
+              </div>
+              <div class="form-field">
+                <input class="form-control" type="text" name="zipcode" id="zipcode" placeholder="Codigo postal" />
+              </div>
+            </div>
+
+            <hr />
+            <!-- <input
                 id="form-button"
                 class="btn btn-success btn-block"
                 type="submit"
                 value="Finalizar compra"
               /> -->
-              <button type="submit" class="btn btn-primary registerbtn" data-bs-toggle="modal" data-bs-target="#myModal">Finalizar Compra</button>
-            </form>
-          </div>
-
-          <br />
-          <div class="box-element hidden" id="payment-info">
-            <small>Opciones de Pago</small>
-            <img src="images/webpay.logo.png" alt="" />
-            <div id="paypal-button-container"></div>
-          </div>
+            <button type="submit" class="btn btn-primary registerbtn" data-bs-toggle="modal"
+              data-bs-target="#myModal">Finalizar Compra</button>
+          </form>
         </div>
 
-        <div class="col-lg-6">
-          <div class="box-element">
-            <a class="btn btn-outline-dark" href="carrito_compras.html"
-              >&#x2190; Volver al Carrito</a
-            >
-            <hr />
-            <h3>Resumen</h3>
-            <hr />
-            <div class="cart-row">
-              <div style="flex: 2">
-                <img
-                  style="width: 100px"
-                  class="row-image"
-                  src="./images/productos/airpods.jfif"
-                  alt="foto-producto"
-                />
-              </div>
-              <br />
-              <div style="flex: 2">
-                <p>Descripcion:</p>
-                <strong
-                  >Apple Airpods 3Ra Generación Con Estuche Magsafe</strong
-                >
-              </div>
-              <br />
-              <div style="flex: 1">
-                <p>Total:</p>
-                <strong>$120.000</strong>
-              </div>
-              <br />
-              <div style="flex: 1">
-                <p>Cantidad:</p>
-                <strong>x1</strong>
-              </div>
+        <br />
+        <div class="box-element hidden" id="payment-info">
+          <small>Opciones de Pago</small>
+          <img src="images/webpay.logo.png" alt="" />
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="box-element">
+          <a class="btn btn-outline-dark" href="carrito_compras.html">&#x2190; Volver al Carrito</a>
+          <hr />
+          <h3>Resumen</h3>
+          <hr />
+          <div class="cart-row">
+            <div style="flex: 2">
+              <img style="width: 100px" class="row-image" src="./images/productos/airpods.jfif" alt="foto-producto" />
+            </div>
+            <br />
+            <div style="flex: 2">
+              <p>Descripcion:</p>
+              <strong>Apple Airpods 3Ra Generación Con Estuche Magsafe</strong>
+            </div>
+            <br />
+            <div style="flex: 1">
+              <p>Total:</p>
+              <strong>$120.000</strong>
+            </div>
+            <br />
+            <div style="flex: 1">
+              <p>Cantidad:</p>
+              <strong>x1</strong>
             </div>
           </div>
         </div>
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal">
+      </div>
+      <!-- The Modal -->
+      <!-- <div class="modal fade" id="myModal">
           <div class="modal-dialog">
             <div class="modal-content">
-              <!-- Modal Header -->
+              
               <div class="modal-header">
                 <h4 class="modal-title">Compra exitosa!!</h4>
                 <button
@@ -230,20 +169,20 @@
                 ></button>
               </div>
 
-              <!-- Modal body -->
+              
               <div class="modal-body">Gracias por comprar en nuestra tienda, en breve recibiras un correo con mas informacion.</div>
 
-              <!-- Modal footer -->
               <div class="modal-footer">
                 <a href="inicio.html" role="button" class="btn btn-danger"
                   >Cerrar</a
                 >
-                <!--  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button> -->
+                
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
