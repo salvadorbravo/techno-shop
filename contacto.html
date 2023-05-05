@@ -44,9 +44,6 @@
             margin-left: 15px;
         }
     </style>
-
-    <!-- Logica de validacion de formulario con JQUERY validation -->
-
 </head>
 
 <body>
@@ -131,28 +128,28 @@
                     <h2>Formulario de Contacto</h2>
                     <form class="row g-3 contactForm mt-4">
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Primer Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
+                            <label for="inputFirstName" class="form-label">Primer Nombre</label>
+                            <input type="text" class="form-control" id="inputFirstName" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Segundo Nombre</label>
-                            <input type="text" class="form-control" id="nombre2" name="nombre2">
+                            <label for="inputSecondName" class="form-label">Segundo Nombre</label>
+                            <input type="text" class="form-control" id="inputSecondName" required>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress" class="form-label">Comentarios</label>
-                            <input type="text" class="form-control" id="comentario" name="comentario" required>
+                            <label for="inputComment" class="form-label">Comentarios</label>
+                            <input type="text" class="form-control" id="inputComment" required>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress" class="form-label">Correo Electronico</label>
-                            <input type="email" class="form-control" id="email" name="email">
+                            <label for="inputEmail" class="form-label">Correo Electronico</label>
+                            <input type="email" class="form-control" id="inputEmail" required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputCity" class="form-label">Ciudad</label>
-                            <input type="text" class="form-control" id="ciudad" name="ciudad">
+                            <input type="text" class="form-control" id="inputCity">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputCity" class="form-label">Número movil</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono">
+                            <label for="inputTel" class="form-label">Número movil</label>
+                            <input type="number" class="form-control" id="inputTel" required>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary mt-3">Enviar</button>
