@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-    crossorigin="anonymous"></script>
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous">
+  </script>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,46 +26,40 @@
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <!-- Jquery validation -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script>
     $(document).ready(function() {
-      $('#form-registro').validate({
+      $('#register-form').validate({
         rules: {
-          user: {
-            required: true,
-            minlength: 5
-          },
           email: {
             required: true,
             email: true
           },
           password: {
-            required: true
+            required: true,
+            minlength: 5
           },
           password2: {
             required: true,
-            equalTo: '#password'
+            minlength: 5
           }
         },
         messages: {
-          user: {
-            required: 'Ingrese un nombre de usuario valido',
-            minlength: 'El nombre de usuario debe tener al menos 5 caracteres'
-          },
           email: {
-            required: 'Debe ingresar un email valido'
+            required: 'Por favor, introduce una direccion de correo electronico valida'
           },
           password: {
             required: 'Ingrese una contraseña valida'
           },
           password2: {
-            required: 'La contraseña debe coincidir'
+            required: 'La contraseña deben ser iguales'
           }
         },
         submitHandler: function(form) {
-          // Redirigir a la pagina de inicio de sesion exitosa
+          // Redirige a la pagina de inicio
           window.location.href = 'inicio.html'
         }
       });
@@ -87,109 +82,37 @@
 </head>
 
 <body>
-  <!-- Header de Barra Menu -->
-  <div class="container">
-    <header
-      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-          <use xlink:href="#bootstrap" />
-        </svg>
-      </a>
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li>
-          <a href="inicio.html" class="nav-link px-2 link-primary">Inicio</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Productos
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="teclados.html">Teclados</a></li>
-            <li><a class="dropdown-item" href="ratones.html">Ratones</a></li>
-            <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
-            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="contacto.html" class="nav-link px-2 link-dark">Contacto</a>
-        </li>
-      </ul>
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn">
-          <a href="login.html" class="btn btn-primary">Ingresar</a>
-        </button>
-        <button type="button" class="btn">
-          <a href="register.html" class="btn btn-success">Registrarse</a>
-        </button>
-        <a href="carrito_compras.html">
-          <img id="cart-icon" src="images/cart.png" />
-        </a>
-      </div>
-    </header>
-  </div> <!--Fin de Barra menu-->
-
   <!--Formulario de Registro-->
-  <div class="card bg-light">
-    <article class="card-body mx-auto">
-      <form id="form-registro">
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-sm-6 offset-sm-3">
+        <h3>Formulario de Registro</h3>
+        <hr>
+
+        <form action="" method="post" novalidate class="shadow p-5" id="register-form">
+          <div class="mb-3">
+            <label for="inputEmail4" class="form-label">Correo electronico</label>
+            <input type="email" class="form-control" id="email" name="email">
+            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electronico con nadie mas.</div>
           </div>
-          <input name="user" id="user" class="form-control" placeholder="Nombre completo" type="text">
-        </div> <!-- form-group// -->
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          <div class="mb-3">
+            <label for="inputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password">
           </div>
-          <input name="email" id="email" class="form-control" placeholder="Correo electronico" type="email">
-        </div> <!-- form-group// -->
-        <!-- <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+          <div class="mb-3">
+            <label for="inputPassword2" class="form-label">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="password2" name="password2">
           </div>
-          <select class="custom-select" style="max-width: 120px;">
-            <option selected="">+56</option>
-            <option value="1">+1</option>
-            <option value="2">+34</option>
-          </select>
-          <input name="" class="form-control" placeholder="Número movil" type="text">
-        </div> form-group// -->
-        <!-- <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          <div class="text-center">
+            <input type="submit" class="submit" value="Registrarse" onclick="redireccionar()">
           </div>
-          <select class="form-control">
-            <option selected=""> Ocupación</option>
-            <option>Estudiante</option>
-            <option>Trabajador</option>
-            <option>Desempleado</option>
-          </select>
-        </div> form-group end.// -->
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-          </div>
-          <input class="form-control" placeholder="Crear contraseña" type="password" name="password" id="password">
-        </div> <!-- form-group// -->
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-          </div>
-          <input class="form-control" placeholder="Repetir contraseña" type="password" name="password2" id="password2">
-        </div> <!-- form-group// -->
-        <div class="form-group">
-          <input type="submit" class="btn btn-primary btn-block w-100" value="Registrarse">
-        </div> <!-- form-group// -->
-        <!-- <p class="text-center">¿Olvidaste tu cuenta? <a href="">Recuperar cuenta</a> </p> -->
-      </form>
-    </article>
-  </div> <!-- card.// -->
+          <br>
+          <div class="text-center text-primary fw-bold"><small>Ya tienes una cuenta? <a href="login.html"
+                class="text-danger">Iniciar sesion</a> </small></div>
+        </form>
+      </div>
+    </div>
   </div>
-  <!--container end.//-->
-  <!-- Jquery -->
 </body>
 
 </html>
