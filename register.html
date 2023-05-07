@@ -21,7 +21,7 @@
   <!-- Jquery validation -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('#register-form').validate({
         rules: {
           name: {
@@ -79,12 +79,14 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              Productos
-            </a>
+              Productos</a>
             <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
               <li><a class="dropdown-item" href="teclados.html">Teclados</a></li>
               <li><a class="dropdown-item" href="ratones.html">Mouse</a></li>
             </ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+          </li>
           </li>
         </ul>
         <form class="d-flex">
@@ -96,17 +98,17 @@
             <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                Salvador
+                Perfil
               </a>
               <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                <li><a class="dropdown-item" href="">Perfil</a></li>
-                <li><a class="dropdown-item" href="">Pedidos</a></li>
-                <li><a class="dropdown-item" href="">Cambiar contraseña</a></li>
-                <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                <li><a class="dropdown-item" href="guardar_direccion.html">Direccion</a></li>
+                <li><a class="dropdown-item" href="ordenes.html">Pedidos</a></li>
+                <li><a class="dropdown-item" href="login.html">Cerrar sesion</a></li>
               </ul>
             </li>
             <li class="nav-item mx-2">
-              <a href="" class="nav-link text-white"><span class="badge bg-danger">4</span> Carrito </a>
+              <a href="carrito_compras.html" class="nav-link text-white"><span class="badge bg-danger">4</span> Carrito
+              </a>
             </li>
             <li class="nav-item mx-2">
               <a href="login.html" class="nav-link text-white">Iniciar sesion</a>
@@ -119,7 +121,7 @@
       </div>
     </div>
   </nav>
-  
+
   <div class="container">
     <div class="row my-3">
       <div class="col-sm-6 offset-sm-3">
@@ -146,8 +148,6 @@
             <input type="submit" class="submit btn btn-danger" value="Registrarse" onclick="redireccionar()">
           </div>
           <br>
-          <div class="text-center text-primary fw-bold"><small>Ya tienes una cuenta ? <a
-                href="login.html" class="text-danger">Iniciar sesion</a> </small></div>
         </form>
       </div>
     </div>
