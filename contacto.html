@@ -31,69 +31,47 @@
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <!-- Jquery validation -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('#contact-form').submit(function(event) {
-        var inputFirstName = $('#inputFirstName').val();
-        var inputLastName = $('#inputLastName').val();
-        var inputComment = $('#inputComment').val();
-        var inputEmail= $('#inputEmail').val();
-        var inputCity = $('#inputCity').val();
-        var inputTel = $('#inputTel').val();
-        var isValid = true;
-    
-        if (inputFirstName.trim() === '') {
-          alert('Por favor ingrese su primer nombre.');
-          isValid = false;
-        }
-    
-        if (inputLastName.trim() === '') {
-          alert('Por favor ingrese su segundo nombre.');
-          isValid = false;
-        }
-    
-        if (inputComment.trim() === '') {
-          alert('Por favor ingrese sus comentarios.');
-          isValid = false;
-        }
-    
-        if (inputEmail.trim() === '') {
-          alert('Por favor ingrese su correo electrónico.');
-          isValid = false;
-        } else if (!isValidEmail(email)) {
-          alert('Por favor ingrese un correo electrónico válido.');
-          isValid = false;
-        }
-    
-        if (inputCity.trim() === '') {
-          alert('Por favor ingrese su ciudad.');
-          isValid = false;
-        }
-    
-        if (inputTel.trim() === '') {
-          alert('Por favor ingrese su número móvil.');
-          isValid = false;
-        } else if (!isValidMobileNumber(mobileNumber)) {
-          alert('Por favor ingrese un número móvil válido.');
-          isValid = false;
-        }
-    
-        if (!isValid) {
-          event.preventDefault();
-        }
-      });
-    
-      function isValidEmail(email) {
-        var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-        return emailPattern.test(email);
-      }
-    
-      function isValidMobileNumber(mobileNumber) {
-        var mobileNumberPattern = /^\d{10}$/;
-        return mobileNumberPattern.test(mobileNumber);
-      }
-    });
-  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// Función para validar el formulario al enviarlo
+		$("#contact-form").submit(function(e) {
+			// Evita que se envíe el formulario por defecto
+			e.preventDefault();
+			// Obtener los valores de los campos del formulario
+			var inputFirstName = $("#inputFirstName").val();
+			var inputLastName = $("#inputLastName").val();
+			var inputEmail = $("#inputEmail").val();
+			var inputCity = $("#inputCity").val();
+			var inputTel = $("#inputTel").val();
+			// Validación de cada campo
+			if (inputFirstName == "") {
+				alert("Por favor, ingrese su primer nombre.");
+				return false;
+			}
+			if (inputLastName == "") {
+				alert("Por favor, ingrese sus apellidos.");
+				return false;
+			}
+			if (inputEmail == "") {
+				alert("Por favor, ingrese su correo electrónico.");
+				return false;
+			}
+			if (inputCity == "") {
+				alert("Por favor, ingrese su ciudad.");
+				return false;
+			}
+			if (inputTel == "") {
+				alert("Por favor, ingrese su número de teléfono.");
+				return false;
+			}
+			// Si todos los campos son válidos, mostrar un mensaje de confirmación
+			alert("¡Gracias por contactarnos! Nos pondremos en contacto con usted lo antes posible.");
+			// Reiniciar el formulario
+			$("#contactForm")[0].reset();
+		});
+	});
+	</script>
 
   <style>
     .offert {
@@ -217,7 +195,7 @@
             </div>
             <div class="col-12">
               <label for="inputComment" class="form-label">Comentarios</label>
-              <input type="text" class="form-control" id="inputComment" required>
+              <input type="comments" class="form-control" id="inputComment" required>
             </div>
             <div class="col-12">
               <label for="inputEmail" class="form-label">Correo Electronico</label>
@@ -229,7 +207,7 @@
             </div>
             <div class="col-md-6">
               <label for="inputTel" class="form-label">Número movil</label>
-              <input type="tel" class="form-control" id="inputTel" required>
+              <input type="num" class="form-control" id="inputTel" required>
             </div>
             <div class="col-12">
               <button type="submit" class="btn btn-primary mt-3">Enviar</button>
