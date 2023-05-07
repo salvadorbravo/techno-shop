@@ -35,12 +35,13 @@
 	<script>
 	$(document).ready(function() {
 		// Función para validar el formulario al enviarlo
-		$("#contact-form").submit(function(e) {
+		$('#contact-form').submit(function(e) {
 			// Evita que se envíe el formulario por defecto
 			e.preventDefault();
 			// Obtener los valores de los campos del formulario
 			var inputFirstName = $("#inputFirstName").val();
 			var inputLastName = $("#inputLastName").val();
+      var inputComment = $('#inputComment').val();
 			var inputEmail = $("#inputEmail").val();
 			var inputCity = $("#inputCity").val();
 			var inputTel = $("#inputTel").val();
@@ -53,6 +54,10 @@
 				alert("Por favor, ingrese sus apellidos.");
 				return false;
 			}
+      if (inputComment == ""){
+        alert("Por favor, ingrese su consulta/reclamo");
+        return false;
+      }
 			if (inputEmail == "") {
 				alert("Por favor, ingrese su correo electrónico.");
 				return false;
@@ -182,6 +187,7 @@
             <p class="mt-4 ms-3">Canal : www.youtube.com/technoshop </p>
           </div>
         </div>
+
         <div class="col-md-8 p-5 ">
           <h2>Formulario de Contacto</h2>
           <form id="contact-form">            
