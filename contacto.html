@@ -32,45 +32,69 @@
   <!-- Jquery validation -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script>
-    $(document).ready(function () {
-      $('#contact-form').validate({
-        rules: {
-          InputFirstName: {
-            required: true
-          },
-          InputSecondName: {
-            required: true
-          },
-          InputComment: {
-            required: true
-          },
-          InputCity: {
-            required: true
-          },
-          InputTel: {
-            required: true
-          }
-        },
-        messages: {
-          InputFirstName: {
-            Required: 'Ingrese su Primer Nombre.'
-          },
-          InputSecondName: {
-            Required: 'Ingrese su Segundo Nombre.'
-          },
-          InputComment: {
-            Required: 'Es obligatorio ingresar el comentario sobre reclamo/consulta.'
-          },
-          InputCity: {
-            Required: 'Ingrese el nombre de su Ciudad/Comuna'
-          },
-          InputTel: {
-            Required: 'Ingrese un Número Movil valido'
-          },
-        },
+    $(document).ready(function() {
+      $('#contact-form').submit(function(event) {
+        var inputFirstName = $('#inputFirstName').val();
+        var inputLastName = $('#inputLastName').val();
+        var inputComment = $('#inputComment').val();
+        var inputEmail= $('#inputEmail').val();
+        var inputCity = $('#inputCity').val();
+        var inputTel = $('#inputTel').val();
+        var isValid = true;
+    
+        if (inputFirstName.trim() === '') {
+          alert('Por favor ingrese su primer nombre.');
+          isValid = false;
+        }
+    
+        if (inputLastName.trim() === '') {
+          alert('Por favor ingrese su segundo nombre.');
+          isValid = false;
+        }
+    
+        if (inputComment.trim() === '') {
+          alert('Por favor ingrese sus comentarios.');
+          isValid = false;
+        }
+    
+        if (inputEmail.trim() === '') {
+          alert('Por favor ingrese su correo electrónico.');
+          isValid = false;
+        } else if (!isValidEmail(email)) {
+          alert('Por favor ingrese un correo electrónico válido.');
+          isValid = false;
+        }
+    
+        if (inputCity.trim() === '') {
+          alert('Por favor ingrese su ciudad.');
+          isValid = false;
+        }
+    
+        if (inputTel.trim() === '') {
+          alert('Por favor ingrese su número móvil.');
+          isValid = false;
+        } else if (!isValidMobileNumber(mobileNumber)) {
+          alert('Por favor ingrese un número móvil válido.');
+          isValid = false;
+        }
+    
+        if (!isValid) {
+          event.preventDefault();
+        }
       });
+    
+      function isValidEmail(email) {
+        var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        return emailPattern.test(email);
+      }
+    
+      function isValidMobileNumber(mobileNumber) {
+        var mobileNumberPattern = /^\d{10}$/;
+        return mobileNumberPattern.test(mobileNumber);
+      }
     });
   </script>
+
   <style>
     .offert {
       margin-top: 15px;
@@ -188,8 +212,8 @@
               <input type="text" class="form-control" id="inputFirstName" required>
             </div>
             <div class="col-md-6">
-              <label for="inputSecondName" class="form-label">Segundo Nombre</label>
-              <input type="text" class="form-control" id="inputSecondName" required>
+              <label for="inputLasName" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="inputLastName" required>
             </div>
             <div class="col-12">
               <label for="inputComment" class="form-label">Comentarios</label>
@@ -205,7 +229,7 @@
             </div>
             <div class="col-md-6">
               <label for="inputTel" class="form-label">Número movil</label>
-              <input type="number" class="form-control" id="inputTel" required>
+              <input type="tel" class="form-control" id="inputTel" required>
             </div>
             <div class="col-12">
               <button type="submit" class="btn btn-primary mt-3">Enviar</button>
