@@ -54,7 +54,7 @@
           }
         },
         submitHandler: function (form) {
-          // Redirige a la pagina de login
+          // Redirige a la página de inicio
           window.location.href = 'inicio.html';
         }
       });
@@ -129,27 +129,26 @@
       <div class="col-sm-6 offset-sm-3">
         <h3>Registrarse</h3>
         <hr>
-        <form action="" method="post" novalidate class="shadow p-5" id="register-form">
+        <form method="post" novalidate class="shadow p-5" id="register-form">
           <div class="mb-3">
             <label for="name" class="form-label">Nombre de usuario</label>
             <input type="text" class="form-control" id="name" name="name">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+            <label for="email" class="form-label">Correo electronico</label>
             <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <label for="password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="password" name="password">
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
+            <label for="password2" class="form-label">Confirmar contraseña</label>
             <input type="password" class="form-control" id="password2" name="password2">
           </div>
-          <div class="text-center">
-            <input type="submit" class="submit btn btn-danger" value="Registrarse" onclick="redireccionar()">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-3">Registrarse</button>
           </div>
-          <br>
         </form>
       </div>
     </div>
